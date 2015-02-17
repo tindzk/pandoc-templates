@@ -83,8 +83,9 @@ $if(graphics)$
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 $endif$
 
-% Comment these out if you don't want a slide with just the
+% Set `section-titles` if you don't want a slide with just the
 % part/section/subsection/subsubsection title:
+$if(section-titles)$
 \AtBeginPart{
   \let\insertpartnumber\relax
   \let\partname\relax
@@ -100,6 +101,7 @@ $endif$
   \let\subsectionname\relax
   \frame{\subsectionpage}
 }
+$endif$
 
 $if(strikeout)$
 \usepackage[normalem]{ulem}
